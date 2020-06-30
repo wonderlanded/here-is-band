@@ -8,7 +8,7 @@ const screen = {
     width: 640,
     height: 480
   };
-let driver = new Builder().forBrowser('chrome').usingServer(webDriverServer).build();
+let driver = new Builder().forBrowser('chrome').setChromeOptions(new chrome.Options().headless().windowSize(screen)).usingServer(webDriverServer).build();
 (async function action() {
   
   let firstItem = ''
